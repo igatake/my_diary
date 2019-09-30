@@ -1,0 +1,25 @@
+.headerContainer {
+  box-shadow: 0 2px 4px;
+  height: 8vh;
+  width: 100%
+}
+
+.hederTitle {
+  font-size: 35px;
+  font-family: 'Comic Sans MS';
+  text-align: center;
+  padding-top: 2vh;
+  :hover {
+    text-decoration: none;
+  }
+  :link {
+    color: #000;
+  }
+  :visited {
+    color: #000;
+  }
+}
+
+.header_new {
+  display: inline;
+}
