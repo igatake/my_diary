@@ -28,3 +28,43 @@
 .articleTime {
   text-align: right;
 }
+
+.pagination {
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.newAritcleContainer {
+  margin: 5%;
+  text-align: center;
+}
+
+.showArticleContainer {
+  margin: auto, 5%;
+}
+
+.showArticleTitle {
+  text-align: center;
+  margin: 5%;
+}
+
+.showArticleContent {
+  text-align: center;
+  margin: 5%;
+  font-size: 20px;
+}
+
+.showArticleTime {
+  text-align: center;
+  margin: 5%;
+}
+
+.showButtons {
+  text-align: center;
+}
+
+hr.style13 {
+	height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}

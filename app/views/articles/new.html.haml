@@ -1,3 +1,4 @@
-%h1 New Article
-= render 'form', article: @article
-= link_to 'Back', articles_path
+.newAritcleContainer
+  %h1.newArticleTitle どんな具合？
+  = render 'form', article: @article
+  = link_to 'タイムライン', articles_path, class: "btn btn-info"

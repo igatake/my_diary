@@ -8,5 +8,5 @@
       %p.articleTime= simple_time(article.updated_at)
       %br/
 
-= paginate(@articles)
+= paginate @articles, class: "articlePaginate"
 = render 'share/new_post'
