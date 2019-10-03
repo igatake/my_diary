@@ -3,7 +3,7 @@
   .newSessionFormContainer
     = form_with(scope: :session, url: login_path, local: true ) do |f|
       .field
-        = f.text_field :password, class: 'pass_field'
+        = f.password_field :password, class: 'pass_field'
         .actions
           = f.submit '照合'
 
