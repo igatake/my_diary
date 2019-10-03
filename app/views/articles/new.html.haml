@@ -2,6 +2,6 @@
   .newAritcleContainer
     %h1.newArticleTitle どんな具合？
     = render 'form', article: @article
-    = link_to 'タイムライン', articles_path, class: "btn btn-info"
+    = link_to 'タイムライン', root_path, class: "btn btn-info"
 -else
   = render 'share/session'
