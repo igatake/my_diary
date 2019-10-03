@@ -71,4 +71,15 @@ class ArticlesController < ApplicationController
     def article_params
       params.require(:article).permit(:title, :content)
     end
+
+    def logged_in?
+      session[:user_id].nil?
+    end
+
+    def login_check
+      unless logged_in?
+        flash[:alert] = "ログインしてください"
+        redirect_to login_path
+      end
+    end
 end

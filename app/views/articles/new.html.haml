@@ -1,4 +1,7 @@
-.newAritcleContainer
-  %h1.newArticleTitle どんな具合？
-  = render 'form', article: @article
-  = link_to 'タイムライン', articles_path, class: "btn btn-info"
+-if !logged_in?
+  .newAritcleContainer
+    %h1.newArticleTitle どんな具合？
+    = render 'form', article: @article
+    = link_to 'タイムライン', articles_path, class: "btn btn-info"
+-else
+  = render 'share/session'

@@ -1,2 +1,4 @@
 .headerContainer
   .hederTitle= link_to 'Take To The Limit', root_path
+  - if !logged_in?
+    = link_to 'logout', logout_path, method: :delete, class: 'btn btn-danger logoutButton'

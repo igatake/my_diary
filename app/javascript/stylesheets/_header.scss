@@ -1,14 +1,15 @@
 .headerContainer {
   box-shadow: 0 2px 4px;
   height: 8vh;
-  width: 100%
+  width: 100%;
+  display: flex;
 }
 
 .hederTitle {
   font-size: 35px;
   font-family: 'Comic Sans MS';
   text-align: center;
-  padding-top: 2vh;
+  margin: auto;
   :hover {
     text-decoration: none;
   }
@@ -20,6 +21,8 @@
   }
 }
 
-.header_new {
-  display: inline;
+.logoutButton {
+  height: 4vh;
+  margin: 2vh;
+  line-height: 3vh;
 }

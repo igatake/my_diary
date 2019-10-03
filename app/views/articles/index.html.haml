@@ -1,12 +1,16 @@
 %p#notice= notice
-.articlesContainer
-  - @articles.each do |article|
-    .articleContainer
-      .display-4.articleTitle= link_to article.title, article
-      %p.lead.articleMiniContent= article.content
-      %hr.my-4
-      %p.articleTime= simple_time(article.updated_at)
-      %br/
+- if !logged_in?
+  .articlesContainer
+    - @articles.each do |article|
+      .articleContainer
+        .display-4.articleTitle= link_to article.title, article
+        %p.lead.articleMiniContent= article.content
+        %hr.my-4
+        %p.articleTime= simple_time(article.updated_at)
+        %br/
 
-= paginate @articles, class: "articlePaginate"
-= render 'share/new_post'
+  = paginate @articles, class: "articlePaginate"
+  = render 'share/new_post'
+- else
+  = render 'share/session'
+= debug(params) if Rails.env.development?

@@ -1,10 +1,13 @@
-.showArticleContainer
-%p
-  %h1.showArticleTitle= @article.title
-  %hr.style13
-  .showArticleContent
-    = @article.content
-  %p.showArticleTime= simple_time(@article.created_at)
-.showButtons
-  = link_to "削除", @article, class: "btn btn-raised btn-danger articleButtons", method: :delete, data: { confirm: 'Are you sure?' }
-  = link_to 'タイムラインへ', root_path, class: "btn btn-info"
+-if !logged_in?
+  .showArticleContainer
+  %p
+    %h1.showArticleTitle= @article.title
+    %hr.style13
+    .showArticleContent
+      = @article.content
+    %p.showArticleTime= simple_time(@article.created_at)
+  .showButtons
+    = link_to "削除", @article, class: "btn btn-raised btn-danger articleButtons", method: :delete, data: { confirm: 'Are you sure?' }
+    = link_to 'タイムラインへ', root_path, class: "btn btn-info"
+-else
+  = render 'share/session'
