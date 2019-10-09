@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
   def create
     admin = params[:session][:password]
-    if admin == 'tai'
+    if admin == ENV['LOGIN_PASSWORD']
       log_in
       redirect_to root_url
     else
